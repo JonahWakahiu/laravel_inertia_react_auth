@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::inertia('/register', 'auth/Register');
+Route::inertia('/login', 'auth/Login');
+Route::inertia('/', 'auth/VerifyEmail');
+Route::inertia('/dashboard', 'layouts/AuthenticatedLayout');
